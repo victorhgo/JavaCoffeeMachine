@@ -7,7 +7,6 @@
 
 package machine;
 import java.util.Scanner;
-import java.lang.Math;
 
 public class CoffeeMachine {
     final static Scanner scanner = new Scanner(System.in);
