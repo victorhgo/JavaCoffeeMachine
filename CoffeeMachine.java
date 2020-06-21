@@ -1,4 +1,3 @@
- 
 /********************************************************
  * Created by Victor Hugo on 16th June, 2020.
  * Learning Java with JetBrains Academy Java Course.
@@ -8,7 +7,9 @@
 package machine;
 import java.util.Scanner;
 
+
 public class CoffeeMachine {
+ 
     final static Scanner scanner = new Scanner(System.in);
 
     static int water = 400;
@@ -21,7 +22,8 @@ public class CoffeeMachine {
 
         boolean shutdown = true;
 
-        do {
+        while (shutdown) {
+         
             System.out.println("Write action (buy, " +
                     "fill, take, remaining, exit): ");
             String option = scanner.next();
@@ -69,12 +71,13 @@ public class CoffeeMachine {
                 case "exit":
                     shutdown = false;
                     break;
-            }
-        } while (shutdown);
 
+            }
+        }
     }
 
     public static void buyEspresso() {
+     
         if (water < 250) {
             System.out.println("Sorry, not enough water!");
         } else if (beans < 16) {
@@ -91,6 +94,7 @@ public class CoffeeMachine {
         }
     }
     public static void buyLatte() {
+     
         if (water < 350) {
             System.out.println("Sorry, not enough water!");
         } else if (beans < 20) {
@@ -109,6 +113,7 @@ public class CoffeeMachine {
         }
     }
     public static void buyCappuccino() {
+     
         if (water < 200) {
             System.out.println("Sorry, not enough water!");
         } else if (beans < 12) {
@@ -128,11 +133,13 @@ public class CoffeeMachine {
 
     }
     private static void remaining(int water, int milk, int beans, int cups, int money) {
+     
         System.out.println("The coffee machine has:\n" +
                 water + " of water\n" +
                 milk + " of milk\n" +
                 beans + " of coffee beans\n" +
                 cups + " of disposable cups\n" +
                 money + " of money\n");
+     
     }
 }
